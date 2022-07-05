@@ -44,7 +44,7 @@ public class TicTacToe {
 			System.out.println("Player '" + player + "',enter your move (row[1-3] column[1-3]) :");
 			playerInput = sc.nextLine();
 			if (isValidMove(board, playerInput)) {
-				placeMove(board, playerInput, player);
+				addMove(board, playerInput, player);
 				break;
 			} else {
 				System.out.println(playerInput + " is not a valid move.");
@@ -63,7 +63,7 @@ public class TicTacToe {
 		return false;
 	}
 
-	private void placeMove(char[][] board, String playerInput, char playerSymbol) {
+	private void addMove(char[][] board, String playerInput, char playerSymbol) {
 		String[] rowsCols=playerInput.split(" ");
 		int row=Integer.parseInt(rowsCols[0]);
 		int col=Integer.parseInt(rowsCols[1]);
